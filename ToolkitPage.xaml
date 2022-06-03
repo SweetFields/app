@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SweetFields.ToolkitPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView HorizontalScrollBarVisibility="Never">
+        <Grid RowSpacing="25" RowDefinitions="Auto,200,Auto,200,Auto,200,Auto,200,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30,30,30,30,30,30,30', Default='30'}">
+            <Label
+                x:Name="List_questions_label"
+                Text="Список вопросов"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Frame
+                Grid.Row="1">
+                <ScrollView 
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Default">
+                    <Editor x:Name="List_questions_editor"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        Placeholder="Строка - вопрос" />
+                </ScrollView>
+            </Frame>
+            <Label
+                x:Name="List_answers_label"
+                Text="Список ответов"
+                Grid.Row="2"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Frame
+                Grid.Row="3">
+                <ScrollView 
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Default">
+                    <Editor x:Name="List_answers_editor"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        Placeholder="Строка - ответ" />
+                </ScrollView>
+            </Frame>
+            <Label
+                x:Name="List_clever_phrases_label"
+                Text="Список умных фраз"
+                Grid.Row="4"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Frame
+                Grid.Row="5">
+                <ScrollView 
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Default">
+                    <Editor x:Name="List_clever_phrases_editor"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        Placeholder="Строка - умная фраза" />
+                </ScrollView>
+            </Frame>
+            <Label
+                x:Name="List_level_challenges_label"
+                Text="Список уровней сложности"
+                Grid.Row="6"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <!-- <Frame
+                Grid.Row="7">
+                <Editor x:Name="List_level_challenges_editor"
+                    Placeholder="Строка - сложность вопроса" />
+            </Frame> -->
+
+            <Frame
+                Grid.Row="7">
+                <ScrollView 
+                    Grid.Row="7"
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Default">
+                    <Editor x:Name="List_level_challenges_editor"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Start"
+                        Placeholder="Строка - сложность вопроса" />
+                </ScrollView>
+            </Frame>
+
+            <Button
+                x:Name="SaveParams_button"
+                Text="Установить параметры"
+                Grid.Row="8"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="SaveParams_button_OnClick" />
+            <Button
+                x:Name="Exit_button"
+                Text="Выйти"
+                Grid.Row="9"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="Exit_button_OnClick" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

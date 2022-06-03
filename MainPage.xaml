@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SweetFields.MainPage">
+			 
+    <AbsoluteLayout>
+        <Button
+            x:Name="StartGame_button"
+            Text="Начать игру"
+            AbsoluteLayout.LayoutBounds="0.5,0.22,110,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="StartGame_button_OnClick" />
+        <Button
+            x:Name="Settings_button"
+            Text="Настройки"
+            AbsoluteLayout.LayoutBounds="0.5,0.44,110,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Settings_button_OnClick" />
+        <Button
+            x:Name="Toolkit_button"
+            Text="Кастомизация целевого файла"
+            AbsoluteLayout.LayoutBounds="0.5,0.66,110,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Toolkit_button_OnClick" />
+        <Button
+            x:Name="Exit_button"
+            Text="Выйти"
+            AbsoluteLayout.LayoutBounds="0.5,0.88,110,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Exit_button_OnClick" />
+    </AbsoluteLayout>
+ 
+</ContentPage>

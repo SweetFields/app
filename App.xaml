@@ -1,0 +1,80 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SweetFields"
+             x:Class="SweetFields.App">
+    <Application.Resources>
+        <ResourceDictionary>
+        <!-- General Light colors -->
+            <Color x:Key="GeneralLightPrimaryColor">#FFA5A5</Color>
+            <Color x:Key="GeneralLightSecondaryColor">#FCD2D1</Color>
+        
+            <!-- General Dark colors -->
+            <Color x:Key="GeneralDarkPrimaryColor">#711CFE</Color>
+            <Color x:Key="GeneralDarkSecondaryColor">#4F127E</Color>
+
+            <!-- Light colors -->
+            <Color x:Key="LightPrimaryColor">#FFFEFF</Color>
+            <Color x:Key="LightSecondaryColor">#1E1D1F</Color>
+
+            <!-- Dark colors -->
+            <Color x:Key="DarkPrimaryColor">#1E1D1F</Color>
+            <Color x:Key="DarkSecondaryColor">#FFFEFF</Color>
+            
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarTextColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+                <Setter Property="FontFamily" Value="OpenSansBlod" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+            </Style>
+
+            <Style TargetType="Frame">
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+                <Setter Property="CornerRadius" Value="18" />
+                <Setter Property="HasShadow" Value="False" />
+            </Style>
+
+            <Style TargetType="Editor">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+                <Setter Property="FontFamily" Value="OpenSansBlod" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+                <Setter Property="IsSpellCheckEnabled" Value="True" />
+                <Setter Property="TextTransform" Value="Lowercase" />
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+                <Setter Property="FontFamily" Value="OpenSansBlod" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+                <Setter Property="IsSpellCheckEnabled" Value="False" />
+                <Setter Property="TextTransform" Value="Lowercase" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource DarkPrimaryColor}, Dark={StaticResource LightPrimaryColor}}" />
+                <Setter Property="FontFamily" Value="OpenSansBlod" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource GeneralLightPrimaryColor}, Dark={StaticResource GeneralDarkPrimaryColor}}" />
+                <Setter Property="Padding" Value="14,10" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="FontAutoScalingEnabled" Value="True" />
+            </Style>
+
+            <Style TargetType="Slider">
+                <Setter Property="ThumbColor" Value="{AppThemeBinding Light={StaticResource GeneralLightPrimaryColor}, Dark={StaticResource GeneralDarkPrimaryColor}}" />
+                <Setter Property="MinimumTrackColor" Value="{AppThemeBinding Light={StaticResource GeneralLightPrimaryColor}, Dark={StaticResource GeneralDarkPrimaryColor}}" />
+                <Setter Property="MaximumTrackColor" Value="{AppThemeBinding Light={StaticResource GeneralLightSecondaryColor}, Dark={StaticResource GeneralLightSecondaryColor}}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

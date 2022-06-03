@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SweetFields.SettingsPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <ScrollView HorizontalScrollBarVisibility="Never">
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*"
+              Padding="{OnPlatform iOS='30,60,30,30,30,30,30,30,30,30', Default='30'}">
+            <Label
+                x:Name="RowsAndCells_label"
+                Text="Количество строк"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Slider
+                x:Name="RowsAndCells_slider"
+                Grid.Row="1"
+                Maximum="10"
+                Minimum="6"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                ValueChanged="RowsAndCells_slider_OnValueChanged" />
+            <Label
+                x:Name="Level_challenges_label"
+                Text="Уровень сложности"
+                Grid.Row="2"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Slider
+                x:Name="Level_challenges_slider"
+                Grid.Row="3"
+                Maximum="3"
+                Minimum="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                ValueChanged="Level_challenges_slider_OnValueChanged" />
+            <Label
+                x:Name="Data_files_label"
+                Text="Уровень сложности"
+                Grid.Row="4"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+            <Slider
+                x:Name="Data_files_slider"
+                Grid.Row="5"
+                Maximum="3"
+                Minimum="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                ValueChanged="Data_files_slider_OnValueChanged" />
+            <Button
+                x:Name="SaveParams_button"
+                Text="Установить параметры"
+                Grid.Row="6"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="SaveParams_button_OnClick" />
+            <Button
+                x:Name="Exit_button"
+                Text="Выйти"
+                Grid.Row="7"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="Exit_button_OnClick" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
