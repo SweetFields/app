@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "launch",
+            "type": "shell",
+            "command": "dotnet build ${workspaceFolder}/Crossword.csproj -t:Run -f net6.0-maccatalyst",
+            "group": {
+                "kind": "none",
+                "isDefault": false
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
